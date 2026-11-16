@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeAlpha Calculator</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="calculator">
+
+        <!-- Calculator Heading -->
+        <header class="calculator-header">
+            <h1>Calculator</h1>
+            <p>Simple. Smart. Accurate.</p>
+        </header>
+
+        <!-- Calculator Display -->
+        <section class="display">
+
+            <div id="previous-operand" class="previous-operand"></div>
+
+            <div id="current-operand" class="current-operand">
+                0
+            </div>
+
+            <div id="preview" class="preview"></div>
+
+        </section>
+
+        <!-- Calculator Buttons -->
+        <section class="buttons">
+
+            <button class="special span-two"
+                data-action="clear">AC</button>
+
+            <button class="special"
+                data-action="delete">DEL</button>
+
+            <button class="operator"
+                data-operator="/">÷</button>
+
+            <button data-number="7">7</button>
+            <button data-number="8">8</button>
+            <button data-number="9">9</button>
+            <button class="operator" data-operator="*">×</button>
+
+            <button data-number="4">4</button>
+            <button data-number="5">5</button>
+            <button data-number="6">6</button>
+            <button class="operator" data-operator="-">−</button>
+
+            <button data-number="1">1</button>
+            <button data-number="2">2</button>
+            <button data-number="3">3</button>
+            <button class="operator" data-operator="+">+</button>
+
+            <button data-number="0">0</button>
+            <button data-action="decimal">.</button>
+            <button class="equals"
+                data-action="calculate">=</button>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="calculator-footer">
+            <p>Developed by Subiya Jeelani | CodeAlpha Internship</p>
+        </footer>
+
+    </main>
+
+    <!-- Connect JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

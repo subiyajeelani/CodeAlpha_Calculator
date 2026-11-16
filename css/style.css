@@ -1,0 +1,337 @@
+
+/* =================================
+   CODEALPHA PREMIUM CALCULATOR
+   DARK GLASSMORPHISM DESIGN
+================================= */
+
+/* 1. GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 20%, #253b70 0%, transparent 35%),
+        radial-gradient(circle at 85% 80%, #482c70 0%, transparent 35%),
+        linear-gradient(135deg, #080d1b, #111a30, #090d1b);
+
+    overflow-x: hidden;
+}
+
+
+/* 2. CALCULATOR GLASS PANEL */
+
+.calculator {
+    width: 100%;
+    max-width: 370px;
+
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.075);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12);
+
+    animation: appear 0.7s ease;
+}
+
+
+/* 3. ENTRANCE ANIMATION */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 4. HEADER */
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.calculator-header h1 {
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #ffffff;
+}
+
+.calculator-header p {
+    margin-top: 6px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #a5b4d4;
+}
+
+
+/* 5. DISPLAY SCREEN */
+
+.display {
+    min-height: 135px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    text-align: right;
+
+    background: rgba(5, 12, 29, 0.65);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+
+    margin-bottom: 23px;
+
+    overflow: hidden;
+}
+
+.previous-operand {
+    min-height: 25px;
+
+    color: #9baac8;
+    font-size: 16px;
+
+    overflow-wrap: anywhere;
+}
+
+.current-operand {
+    min-height: 48px;
+
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+.preview {
+    min-height: 22px;
+
+    color: #60a5fa;
+    font-size: 14px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* 6. BUTTON GRID */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+/* 7. COMMON BUTTON DESIGN */
+
+button {
+    height: 62px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    color: #f1f5f9;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* 8. BUTTON HOVER EFFECT */
+
+button:hover {
+    background: rgba(255, 255, 255, 0.17);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 9. BUTTON CLICK EFFECT */
+
+button:active {
+    transform: scale(0.94);
+}
+
+
+/* 10. SPECIAL BUTTONS */
+
+.special {
+    color: #c4b5fd;
+
+    background: rgba(139, 92, 246, 0.17);
+}
+
+.special:hover {
+    background: rgba(139, 92, 246, 0.30);
+}
+
+
+/* 11. OPERATOR BUTTONS */
+
+.operator {
+    color: #ffffff;
+
+    background: linear-gradient(
+        145deg,
+        #3b82f6,
+        #6366f1
+    );
+
+    border: none;
+}
+
+.operator:hover {
+    background: linear-gradient(
+        145deg,
+        #60a5fa,
+        #818cf8
+    );
+
+    box-shadow:
+        0 5px 20px rgba(99, 102, 241, 0.35);
+}
+
+
+/* 12. EQUAL BUTTON */
+
+.equals {
+    color: #ffffff;
+
+    background: linear-gradient(
+        145deg,
+        #10b981,
+        #059669
+    );
+
+    border: none;
+}
+
+.equals:hover {
+    background: linear-gradient(
+        145deg,
+        #34d399,
+        #10b981
+    );
+
+    box-shadow:
+        0 5px 20px rgba(16, 185, 129, 0.35);
+}
+
+
+/* 13. DOUBLE WIDTH BUTTON */
+
+.span-two {
+    grid-column: span 2;
+}
+
+
+/* 14. FOOTER */
+
+.calculator-footer {
+    margin-top: 24px;
+
+    text-align: center;
+}
+
+.calculator-footer p {
+    color: #8998b5;
+
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+
+/* 15. RESPONSIVE DESIGN */
+
+@media (max-width: 420px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .calculator {
+        padding: 20px;
+        border-radius: 23px;
+    }
+
+    button {
+        height: 56px;
+        font-size: 19px;
+        border-radius: 13px;
+    }
+
+    .current-operand {
+        font-size: 32px;
+    }
+
+}
+
+
+/* 16. SMALL SCREEN SUPPORT */
+
+@media (max-width: 340px) {
+
+    .calculator {
+        padding: 14px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    button {
+        height: 50px;
+        font-size: 17px;
+    }
+
+}
+
