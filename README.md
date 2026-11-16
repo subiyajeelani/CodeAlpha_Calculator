@@ -23,17 +23,17 @@ A modern, responsive calculator developed as part of the CodeAlpha Frontend Deve
 ## Project Structure
 
 CodeAlpha_Calculator/
-
- index.html
- css/
- style.css
- js/
- script.j
- assets/
- images/
- icons/
- README.md
- .gitignore
+│
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── assets/
+│   ├── images/
+│   └── icons/
+├── README.md
+└── .gitignore
 
 ## How to Run
 
